@@ -33,27 +33,31 @@ export default function Home() {
           <br/><b>Behavior Observation: BOSS</b>.
         </p>
 
-            <img className={styles.feature} src="/img/screenshot-1.png" alt="Behavior Observation of Students in School"/>
+           <div className={styles.feature} >
+            <img src="/img/screenshot-1.png" alt="Behavior Observation of Students in School"/>
+          </div>
 
+
+          <div className={styles.row}>
+             <a
+               href="https://apps.apple.com/us/app/behavior-observation-boss/id1534801113"
+               className={styles.cta}
+             >
+               <img src="img/get-on-app-store.png" alt="Download iOS version on App Store"/>
+             </a>
+
+             <a
+                href="#"
+               onClick={() => alert('coming soon...')}
+               className={styles.cta}
+             >
+               <img src="img/get-on-google-play.png" alt="Download Android version on Google Play"/>
+             </a>
+          </div>
+            
             </div>
          <div className={styles.grid}>
 
-         <div className={styles.row}>
-            <a
-              href="https://apps.apple.com/us/app/behavior-observation-boss/id1534801113"
-              className={styles.cta}
-            >
-              <img class="img-fluid" src="img/get-on-app-store.png" alt="Download iOS version on App Store"/>
-            </a>
-
-            <a
-               href="#"
-              onClick={() => alert('coming soon...')}
-              className={styles.cta}
-            >
-              <img src="img/get-on-google-play.png" alt="Download Android version on Google Play"/>
-            </a>
-         </div>
          </div>
 
         <div className={styles.grid}>
