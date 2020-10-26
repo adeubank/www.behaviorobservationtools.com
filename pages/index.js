@@ -1,25 +1,10 @@
 import Head from 'next/head'
+import Layout from './layout'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Behavior Observation Tools</title>
-        <link rel="icon" href="/img/icon.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      </Head>
-
-
-        <header className={styles.header}>
-          <img className={styles.logo} src="/img/icon.png" alt="Behavior Observation: BOSS Logo"/>
-          <h1 className={styles.title}>
-            Behavior&nbsp;Observation&nbsp;Tools
-          </h1>
-        </header>
-
-      <main className={styles.main}>
-
+    <Layout>
         <div className={styles.hero}>
         <h2 className={styles.subtitle}>
           Behavior Observation of Students in School
@@ -48,17 +33,14 @@ export default function Home() {
 
              <a
                 href="#"
-               onClick={() => alert('coming soon...')}
+               onClick={() => {alert('coming soon...'); return}}
                className={styles.cta}
              >
                <img src="img/get-on-google-play.png" alt="Download Android version on Google Play"/>
              </a>
           </div>
-            
-            </div>
-         <div className={styles.grid}>
 
-         </div>
+        </div>
 
         <div className={styles.grid}>
 
@@ -92,18 +74,6 @@ export default function Home() {
          </div>
 
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    </Layout>
   )
 }
