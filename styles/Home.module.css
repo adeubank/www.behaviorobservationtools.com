@@ -1,6 +1,9 @@
+
 .container {
+  color: #fff;
+  background: rgb(255,255,255);
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(97,15,230,1) 33%);
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,12 +11,34 @@
 }
 
 .main {
-  padding: 5rem 0;
+  width: 100%;
+  padding: 5rem 0.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eaeaea;
+  padding: 0.25rem;
+}
+
+.hero {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo {
+  height: 3em;
 }
 
 .footer {
@@ -36,7 +61,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: #610fe6;
   text-decoration: none;
 }
 
@@ -49,7 +74,13 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 1.25rem;
+}
+
+.subtitle {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 1.25rem;
 }
 
 .title,
@@ -71,14 +102,43 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.feature {
+  max-width: 100%;
+  max-height: 768px;
+}
+
 .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 960px;
   margin-top: 3rem;
 }
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.cta {
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+
+.cta:hover,
+.cta:focus,
+.cta:active {
+  color: #610fe6;
+  border-color: #610fe6;
+}
+
+
+.cta h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
 
 .card {
   margin: 1rem;
@@ -95,8 +155,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #610fe6;
+  border-color: #610fe6;
 }
 
 .card h3 {
@@ -110,9 +170,10 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
+.card img {
+  max-width: 450px;
 }
+
 
 @media (max-width: 600px) {
   .grid {
