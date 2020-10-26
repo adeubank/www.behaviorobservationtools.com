@@ -26,8 +26,11 @@ export default function Home() {
         </h2>
 
         <p className={styles.description}>
-          <span className={styles.textGray}>Presenting the behavior observation tool,</span>
-          <br/>Behavior observation of students in school (BOSS).
+          <small>
+            Presenting<br/>
+            the behavior observation tool,
+          </small>
+          <br/><b>Behavior Observation: BOSS</b>.
         </p>
 
             <img className={styles.feature} src="/img/screenshot-1.png" alt="Behavior Observation of Students in School"/>
@@ -38,18 +41,17 @@ export default function Home() {
          <div className={styles.row}>
             <a
               href="https://apps.apple.com/us/app/behavior-observation-boss/id1534801113"
-              className={styles.card}
+              className={styles.cta}
             >
-              <h3>On iOS</h3>
+              <img class="img-fluid" src="img/get-on-app-store.png" alt="Download iOS version on App Store"/>
             </a>
 
             <a
                href="#"
-              onClick="alert('coming soon...')"
-              className={styles.card}
+              onClick={() => alert('coming soon...')}
+              className={styles.cta}
             >
-              <h3>On&nbsp;Android</h3>
-              <p><i>coming soon...</i></p>
+              <img src="img/get-on-google-play.png" alt="Download Android version on Google Play"/>
             </a>
          </div>
          </div>
@@ -58,16 +60,16 @@ export default function Home() {
 
          <div className={styles.row}>
          <div className={styles.card}>
-           <h3>In Classroom</h3>
-           <p>Observe students in the classroom, systematically.</p>
+           <h3><small>Observe students,</small><br/>In Classroom</h3>
+           <p>Observe students in the classroom, systematically. Track in-classroom behaviors easily and reliably.</p>
          <img src="/img/classroom.jpg" alt="Behavior Observation of Students in School"/>
 
          </div>
 
          <div className={styles.card}>
-           <h3>Virtually</h3>
-           <p>Observe students virtually. Includes methods for evaluating student
-             participation in a remote setting.</p>
+           <h3><small>Observe students,</small><br/>Virtually</h3>
+           <p>Observe students virtually. Using the <b>Virtual</b> method, 
+           enables features for evaluating student participation in a remote setting.</p>
            <img src="/img/virtual-meetings.jpg" alt="Virtual Behavior Observation of Students in School"/>
 
          </div>
