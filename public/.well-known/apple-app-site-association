@@ -1,0 +1,25 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "H93YRR23HH.com.bos.boss" ],
+             "components": [
+               {
+                  "/": "/privacy",
+                  "exclude": true,
+                  "comment": "Matches any URL whose path starts with /privacy"
+               },
+               {
+                  "/": "/terms",
+                  "exclude": true,
+                  "comment": "Matches any URL whose path starts with /terms"
+               },
+               {
+                  "/": "/",
+                  "comment": "Handle root URL"
+               },
+             ]
+           }
+       ]
+   },
+}
