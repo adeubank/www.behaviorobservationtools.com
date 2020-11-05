@@ -1,25 +1,29 @@
 {
-  "applinks": {
-      "details": [
-           {
-             "appIDs": [ "H93YRR23HH.com.bos.boss" ],
-             "components": [
-               {
-                  "/": "/privacy",
-                  "exclude": true,
-                  "comment": "Matches any URL whose path starts with /privacy"
-               },
-               {
-                  "/": "/terms",
-                  "exclude": true,
-                  "comment": "Matches any URL whose path starts with /terms"
-               },
-               {
-                  "/": "/",
-                  "comment": "Handle root URL"
-               }
-             ]
-           }
-       ]
-   }
+    "applinks":
+    {
+        "apps": [], // This is usually left empty, but still must be included
+        "details": [
+        {
+            "appIDs": ["H93YRR23HH.com.bos.boss"],
+            "components": [
+            {
+                "/": "/privacy",
+                "exclude": true,
+                "comment": "Matches any URL whose path starts with /privacy"
+            },
+            {
+                "/": "/terms",
+                "exclude": true,
+                "comment": "Matches any URL whose path starts with /terms"
+            },
+            {
+                "/": "/",
+                "comment": "Handle root URL"
+            },
+            {
+                "appID": "H93YRR23HH.com.bos.boss",
+                "paths": ["/"]
+            }]
+        }]
+    }
 }
