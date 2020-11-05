@@ -17,9 +17,9 @@
                {
                   "/": "/",
                   "comment": "Handle root URL"
-               },
+               }
              ]
            }
        ]
-   },
+   }
 }
