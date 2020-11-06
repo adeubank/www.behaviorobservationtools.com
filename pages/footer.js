@@ -18,6 +18,11 @@ export default function Footer() {
           href="/terms"
         >
           Terms
+        </a>|
+        <a
+          href="/contact"
+        >
+          Contact
         </a>
       </footer>
 }
