@@ -54,7 +54,7 @@ export default function Home() {
 
          <div className={styles.card}>
            <h3><small>Observe students,</small><br/>Virtually</h3>
-           <p>Observe students virtually. Using the <b>Virtual</b> method, 
+           <p>Observe students virtually. Using the <b>Virtual</b> method,
            enables features for evaluating student participation in a remote setting.</p>
            <img src="/img/virtual-meetings.jpg" alt="Virtual Behavior Observation of Students in School"/>
 
@@ -62,7 +62,24 @@ export default function Home() {
          </div>
 
          <div className={styles.card}>
-           <h3>Features:</h3>
+           <h3>Track behavior, systematically.</h3>
+           <p>
+              Perform functional behavior assessments using this behavior
+              observation of students (BOSS) app easily. You can customize the
+              duration and interval to tailor observations to your liking.
+              Focus on tracking the main categories of behavior, Engaged,
+              Non-Engaged, and Virtual behaviors. It’s never been easier to
+              conduct systematic behavior observation.
+            </p>
+            <br/>
+           <p>
+             This tool is a dream for school psychologists, Applied Behavior
+             Analysis (ABA) professionals, and board certified behavior analysts
+              (BCBA). Equip yourself with the tools to easily and quickly provide
+              the insights needed for a successful instructional intervention.
+              Makes systematic behavior observations a breeze.
+           </p>
+           <h4>Features:</h4>
            <ul>
              <li>Track behavior, systematically.</li>
              <li>Client and peer tracking for baseline.</li>
