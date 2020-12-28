@@ -32,8 +32,7 @@ export default function Home() {
              </a>
 
              <a
-                href="#"
-               onClick={() => {alert('coming soon...'); return}}
+                href="https://play.google.com/store/apps/details?id=com.bos.boss"
                className={styles.cta}
              >
                <img src="img/get-on-google-play.png" alt="Download Android version on Google Play"/>
