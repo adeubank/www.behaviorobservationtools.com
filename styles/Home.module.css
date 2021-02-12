@@ -198,7 +198,8 @@
 
 .card:hover,
 .card:focus,
-.card:active {
+.card:active,
+.card.active {
   background-color: #fff;
   color: #610fe6;
   border-color: #610fe6;
