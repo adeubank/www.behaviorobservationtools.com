@@ -5,7 +5,9 @@ export default function HowItWorks() {
   return <Layout>
   <div className={styles.grid}>
     <div className={[styles.card , styles.active].join(' ')}>
-      <h2>Behavior Observation of Students in School (BOSS): How it works</h2>
+      <h1>How It Works</h1>
+
+       <h2>Behavior Observation of Students in School (BOSS)</h2>
 
       <h3>Momentary Time Sampling: Engaged Behaviors</h3>
       <p>At the end of the each interval, tap whether the student is passively engaged in the task or actively engaged in the task. <em>If the student <b>is not</b> engaged in the task at all, do not tap either of those options.</em></p>
@@ -51,7 +53,7 @@ export default function HowItWorks() {
       </table>
 
       <br/>
-      <p>We hope you enjoy using the BOSS app. Please leave us a review and if you have any questions or concerns, please visit our <a href="/contact">contact page and drop us a line!</a></p>
+      <p>We hope you enjoy using the BOSS app. Please leave us a review and if you have any questions or concerns, please visit our <a href="/contact" className={styles.underline}>contact page and drop us a line!</a></p>
 
       <br/>
       <h5><em>Happy Tracking! Vennesa and Allen from the BOSS app team ❤️</em></h5>

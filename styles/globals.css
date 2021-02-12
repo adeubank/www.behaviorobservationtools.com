@@ -15,5 +15,8 @@ a {
   box-sizing: border-box;
 }
 
-table, table tr td, table thead tr th { border: 1px solid;}
+table { border-spacing: 0; }
+
+table, table thead tr th { border: 1px solid;}
+table tr td { border: 0.5px solid; }
 th, td { padding: 1rem; }
