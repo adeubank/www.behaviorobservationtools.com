@@ -2,7 +2,6 @@ import Layout from './layout'
 import styles from '../styles/Home.module.css'
 
 export default function HowItWorks() {
-  console.dir(styles)
   return <Layout>
   <div className={styles.grid}>
     <div className={[styles.card , styles.active].join(' ')}>
