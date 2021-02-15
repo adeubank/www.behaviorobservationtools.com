@@ -21,12 +21,12 @@ export default function HowItWorks() {
 
       <h3>Partial Interval Recording: Non-Engaged Behaviors</h3>
 
-      <p>If at <b>ANY</b> moment during the interval, the student performs any
+      <p>If at <b>ANY</b> moment during the interval, the student engages in any
       of the following behaviors, tap the corresponding behavior accordingly.
       A student can engage in none, one, or more than one in a given interval.</p>
       <br/>
       <p>For example, if a student looks away from the speaker for more than 10
-      seconds, and then performs self-stimulation behavior, the observer would
+      seconds, and then engages in self-stimulation behavior, the observer would
       tap both the <b>Passive</b> and the <b>Motor</b> buttons. </p>
       <br />
       <table>
