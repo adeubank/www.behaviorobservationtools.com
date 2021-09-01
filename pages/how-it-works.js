@@ -9,6 +9,15 @@ export default function HowItWorks() {
 
        <h2>Behavior Observation of Students in School (BOSS)</h2>
 
+       <h3>Peer Comparison</h3>
+
+       <p>Every 5th interval of an observation is used to track behavior data for a peer. 
+       Start with one peer at the corner of the room or desk, and then circle around the room every 
+       time the peer screen comes up. That way, we are comparing to more than 
+       one peer within the same observation. However, if you wanted to do the 
+       same peer for the entirety of the observation, you could take data on that
+        same peer every time the peer screen pops up.</p><br/>
+
       <h3>Momentary Time Sampling: Engaged Behaviors</h3>
       <p>At the end of the each interval, tap whether the student is passively engaged in the task or actively engaged in the task. <em>If the student <b>is not</b> engaged in the task at all, do not tap either of those options.</em></p>
 
