@@ -34,19 +34,19 @@ export default function Privacy() {
         
         <p>You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.</p>
 
-        <p>Your continued use of our app will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.</p>
-
         <h3>Data Retention & Deletion</h3>
 
-        <p>Crash data is retained only for 14 days or as long as needed to resolve app usage issues. Other data may retained in a non-personally identifiable format to provide us with usage analytics.</p>
+        <p>Crash data is retained only for 14 days or as long as needed to resolve app usage issues. Other data may retained in a non-personally identifiable format to provide us with usage analytics.</p> 
 
-        <p>You may request deletion of data by notifying us at behaviorobservationtools@gmail.com.</p>
+        <p>You may request deletion of the data we have collected by notifying us at behaviorobservationtools@gmail.com. Users of the app are custodians of their device and the app data storage within the device. We are not responsible for data loss on a device for any reason. Parents can request deletion of student data by notifying users of our app and by emailing us at behaviorobservationtools@gmail.com.</p>
 
         <h3>Data Security and Confidentiality</h3>
         
         <p>To ensure data security and confidentiality, we follow the <a target="_blank" href="https://studentprivacy.ed.gov/sites/default/files/resource_document/file/checklist_data_breach_response_092012_0.pdf" rel="nofollow">Data Breach Response Checklist (PTAC-CL, Sep 2012) provided by the Privacy Techinical Assistance Center</a><a href="1"><sup>1</sup></a>.</p>
 
         <p>Each release of the app is audited for data security and integrity. We continously monitor for personally indentifiable information and other sensitive data leakage and loss. In the event a data breach becomes known to you, please notify us immediately at behaviorobservationtools@gmail.com.</p>
+
+        <p>Your continued use of our app will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.</p>
 
         <p>This policy is effective as of 26 October 2021.</p>
 
