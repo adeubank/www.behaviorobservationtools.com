@@ -8,7 +8,7 @@ export default function Privacy() {
 				<div className={styles.code}>
 					<h2>Privacy Policy</h2>
 
-					<p>Last updated 10/26/2021.</p>
+					<p>Last updated 01/19/2023.</p>
 
 					<p>
 						Your privacy is important to us. It is Allen Eubank Technology's
