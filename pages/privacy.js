@@ -35,7 +35,7 @@ export default function Privacy() {
 						off the device in the event of an app crash to aid in
 						troubleshooting app usage issues and as necessary to provide you
 						with your requested service. This information is not used for any
-						other purpose. This data is never retained for more than 7 days and
+						other purpose. This data is never retained for more than 14 days and
 						can be deleted on request.
 					</p>
 
