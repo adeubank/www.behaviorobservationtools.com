@@ -1,72 +1,121 @@
-import Layout from './layout'
-import styles from '../styles/Home.module.css'
+import Layout from "./layout";
+import styles from "../styles/Home.module.css";
+import Head from "next/head";
 
 export default function HowItWorks() {
-  return <Layout>
-  <div className={styles.grid}>
-    <div className={[styles.card , styles.active].join(' ')}>
-      <h1>How It Works</h1>
+  return (
+    <Layout>
+      <Head>
+        <title>
+          How It Works - Behavior Observation of Students in School (BOSS)
+        </title>
+      </Head>
+      <div className={styles.grid}>
+        <div className={[styles.card, styles.active].join(" ")}>
+          <h1>
+            How It Works - Behavior Observation of Students in School (BOSS)
+          </h1>
 
-       <h2>Behavior Observation of Students in School (BOSS)</h2>
+          <p>
+            The BOSS tool is designed to facilitate the observation and
+            recording of student behavior in a classroom setting. Observations
+            are conducted in intervals, and data is collected regarding
+            students' engagement in tasks, as well as specific non-engaged
+            behaviors. The tool also allows for peer comparison by tracking
+            behavior data for a peer at specified intervals.
+          </p>
 
-       <h3>Peer Comparison</h3>
+          <h3>Peer Comparison</h3>
 
-       <p>Every 5th interval of an observation is used to track behavior data for a peer. 
-       Start with one peer at the corner of the room or desk, and then circle around the room every 
-       time the peer screen comes up. That way, we are comparing to more than 
-       one peer within the same observation. However, if you wanted to do the 
-       same peer for the entirety of the observation, you could take data on that
-        same peer every time the peer screen pops up.</p><br/>
+          <p>
+            During an observation, every 5th interval is designated for tracking
+            behavior data for a peer. To begin, select one peer at the corner of
+            the room or desk, and then move to the next peer each time the peer
+            screen appears. This process ensures that data is collected for
+            multiple peers within a single observation. Alternatively, if you
+            prefer to focus on the same peer for the entire observation, you can
+            choose to record data for that specific peer each time the peer
+            screen appears.
+          </p>
 
-      <h3>Momentary Time Sampling: Engaged Behaviors</h3>
-      <p>At the end of the each interval, tap whether the student is passively engaged in the task or actively engaged in the task. <em>If the student <b>is not</b> engaged in the task at all, do not tap either of those options.</em></p>
+          <h3>Momentary Time Sampling: Engaged Behaviors</h3>
 
-      <h4>Actively Engaged in Task</h4>
-      <p>Student is writing, raising their hand, answering/asking questions (to the teacher or, if participating in group work, other students), turning a page, or reading (silently or aloud).</p>
-      <h4>Passively Engaged in Task</h4>
-      <p>Student has their body and eye gaze oriented toward the speaker or task.</p>
+          <p>
+            Momentary time sampling is used to assess student engagement in
+            tasks at the end of each interval. There are two levels of
+            engagement to consider:
+          </p>
 
-      <br/>
+          <h4>Actively Engaged in Task</h4>
+          <p>Indicators of active engagement include:</p>
+          <ul>
+            <li>Writing</li>
+            <li>Raising their hand</li>
+            <li>
+              Answering/asking questions (to the teacher or other students
+              during group work)
+            </li>
+            <li>Turning a page</li>
+            <li>Reading (silently or aloud)</li>
+          </ul>
 
-      <h3>Partial Interval Recording: Non-Engaged Behaviors</h3>
+          <h4>Passively Engaged in Task</h4>
+          <p>Indicators of passive engagement include:</p>
+          <ul>
+            <li>Body and eye gaze oriented toward the speaker or task</li>
+          </ul>
 
-      <p>If at <b>ANY</b> moment during the interval, the student engages in any
-      of the following behaviors, tap the corresponding behavior accordingly.
-      A student can engage in none, one, or more than one in a given interval.</p>
-      <br/>
-      <p>For example, if a student looks away from the speaker for more than 10
-      seconds, and then engages in self-stimulation behavior, the observer would
-      tap both the <b>Passive</b> and the <b>Motor</b> buttons. </p>
-      <br />
-      <table>
-        <thead>
-          <tr>
-            <th width="33%">Non-Engaged Behavior</th>
-            <th>Example</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Passive</td>
-            <td>Student looks away for at least 10 seconds. </td>
-          </tr>
-          <tr>
-            <td>Verbal</td>
-            <td>Student speaks to anyone who is not the designated speaker or speaks out of turn. This includes verbal self-stimulation behavior. </td>
-          </tr>
-          <tr>
-            <td>Motor</td>
-            <td>Student engages in any motor behavior that is not related to the task for at least 3 seconds. </td>
-          </tr>
-        </tbody>
-      </table>
+          <p>
+            If the student is not engaged in the task at all, do not select
+            either of the engagement options.
+          </p>
 
-      <br/>
-      <p>We hope you enjoy using the BOSS app. Please leave us a review and if you have any questions or concerns, please visit our <a href="/contact" className={styles.underline}>contact page and drop us a line!</a></p>
+          <h3>Partial Interval Recording: Non-Engaged Behaviors</h3>
 
-      <br/>
-      <h5><em>Happy Tracking! Vennesa and Allen from the BOSS app team ❤️</em></h5>
-    </div>
-  </div>
-</Layout>
+          <p>
+            Partial interval recording is used to capture instances of specific
+            non-engaged behaviors during each interval. If a student engages in
+            any of the following behaviors at any moment during the interval,
+            record the corresponding behavior:
+          </p>
+
+          <ul>
+            <li>
+              Passive: Student looks away from the speaker or task for at least
+              10 seconds
+            </li>
+            <li>
+              Verbal: Student speaks to anyone other than the designated speaker
+              or speaks out of turn (includes verbal self-stimulation behavior)
+            </li>
+            <li>
+              Motor: Student engages in any motor behavior unrelated to the task
+              for at least 3 seconds
+            </li>
+          </ul>
+
+          <p>
+            A student may exhibit none, one, or multiple non-engaged behaviors
+            during a given interval.
+          </p>
+
+          <p>
+            We hope you find the BOSS tool helpful for observing and tracking
+            student behavior in the classroom. If you have any questions or
+            feedback, please visit our{" "}
+            <a href="https://www.behaviorobservationtools.com/contact">
+              contact page
+            </a>{" "}
+            and drop us a line!
+          </p>
+
+          <p>
+            Happy Tracking!
+            <br />
+            Vennesa and Allen from the BOSS app team ❤️
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

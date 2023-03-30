@@ -15,8 +15,100 @@ a {
   box-sizing: border-box;
 }
 
-table { border-spacing: 0; }
+table {
+  border-spacing: 0;
+}
 
-table, table thead tr th { border: 1px solid;}
-table tr td { border: 0.5px solid; }
-th, td { padding: 1rem; }
+table,
+table thead tr th {
+  border: 1px solid;
+}
+table tr td {
+  border: 0.5px solid;
+}
+th,
+td {
+  padding: 1rem;
+}
+
+@media print {
+  /* Hide website header, footer, and other unnecessary elements for printing */
+  header,
+  footer,
+  nav,
+  .breadcrumb,
+  .social-media-links,
+  .call-to-action {
+    display: none !important;
+  }
+
+  /* Set page margins and use the entire width of the page */
+  body {
+    margin: 0.5in;
+    width: 100%;
+  }
+
+  /* Ensure that the main content is clearly visible and fits within the page */
+  .main-content {
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Increase the font size for better readability */
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  ol {
+    font-size: 12pt;
+  }
+
+  /* Set the line height for better readability */
+  p,
+  ul,
+  ol {
+    line-height: 1.5;
+  }
+
+  /* Improve spacing between sections */
+  h1,
+  h2,
+  h3 {
+    margin-top: 0.75in;
+    margin-bottom: 0.25in;
+  }
+
+  /* Avoid page breaks inside sections and between headings and content */
+  .section {
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* Set the color of text and links to black for printing */
+  body,
+  a {
+    color: #000;
+  }
+
+  /* Remove text decoration from links */
+  a {
+    text-decoration: none;
+  }
+
+  /* Hide any elements that are not relevant to printing (e.g., interactive elements) */
+  .interactive-element,
+  .hide-print {
+    display: none !important;
+  }
+
+  .header,
+  .container {
+    background-color: #fff;
+  }
+}

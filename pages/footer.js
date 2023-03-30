@@ -1,28 +1,11 @@
-import styles from '../styles/Home.module.css'
+import styles from "../styles/Home.module.css";
 
 export default function Footer() {
-  return <footer className={styles.footer}>
-        <a
-          href="/"
-        >
-          Behavior Observation: BOSS
-        </a>
-        |
-        <a
-          href="/privacy"
-        >
-          Privacy Policy
-        </a>
-        |
-        <a
-          href="/terms"
-        >
-          Terms
-        </a>|
-        <a
-          href="/contact"
-        >
-          Contact
-        </a>
-      </footer>
+  return (
+    <footer className={styles.footer}>
+      <a href="/">Behavior Observation: BOSS</a>|
+      <a href="/privacy">Privacy Policy</a>|<a href="/terms">Terms</a>|
+      <a href="/contact">Contact</a>|<a href="/how-it-works">How It Works</a>
+    </footer>
+  );
 }
