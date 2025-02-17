@@ -7,6 +7,9 @@ export default function Terms() {
       <div className={styles.grid}>
         <div className={styles.code}>
           <h2>Allen Eubank Technology Terms of Service</h2>
+
+          <p>Last updated 02/17/2025.</p>
+
           <h3>1. Terms</h3>
           <p>
             By accessing our app, Behavior Observation: BOSS, you are agreeing
