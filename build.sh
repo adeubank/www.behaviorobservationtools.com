@@ -16,6 +16,12 @@ bun install
 echo "🏗️ Building with Vite..."
 bun run build
 
+# Copy .well-known directory for Apple App Site Association
+if [ -d "src/assets/.well-known" ]; then
+  cp -r src/assets/.well-known dist/
+  echo "✅ Copied .well-known directory"
+fi
+
 # Verify build
 echo "✅ Build verification:"
 echo "Main page: $([ -f "dist/index.html" ] && echo "✅ Found" || echo "❌ Missing")"
