@@ -5,12 +5,19 @@
       {
         "appID": "H93YRR23HH.com.bos.boss",
         "paths": [
-          "*"
+          "/",
+          "/index.html",
+          "/contact.html",
+          "NOT /privacy.html",
+          "NOT /terms.html"
         ]
       }
     ]
   },
   "webcredentials": {
+    "apps": ["H93YRR23HH.com.bos.boss"]
+  },
+  "activitycontinuation": {
     "apps": ["H93YRR23HH.com.bos.boss"]
   }
 }
