@@ -5,6 +5,17 @@ import { initializeCarousel } from './carousel';
 import { initializeTheme } from './theme';
 import { initializeInteractions } from './interactions';
 
+// Import screenshot images for proper bundling
+import screenshot1 from '../assets/img/v3.0.0-screenshots/400x800bb.png';
+import screenshot2 from '../assets/img/v3.0.0-screenshots/400x800bb-2.png';
+import screenshot3 from '../assets/img/v3.0.0-screenshots/400x800bb-3.png';
+import screenshot4 from '../assets/img/v3.0.0-screenshots/400x800bb-4.png';
+import screenshot5 from '../assets/img/v3.0.0-screenshots/400x800bb-5.png';
+import screenshot6 from '../assets/img/v3.0.0-screenshots/400x800bb-6.png';
+import screenshot7 from '../assets/img/v3.0.0-screenshots/400x800bb-7.png';
+import screenshot8 from '../assets/img/v3.0.0-screenshots/400x800bb-8.png';
+import screenshot9 from '../assets/img/v3.0.0-screenshots/400x800bb-9.png';
+
 // App State
 interface AppState {
   currentScreenshot: number;
@@ -21,47 +32,47 @@ class BehaviorObservationApp {
 
   private screenshots: Array<{src: string, alt: string, title: string}> = [
     {
-      src: '/src/assets/img/v3.0.0-screenshots/400x800bb.png',
+      src: screenshot1,
       alt: 'BOSS App Main Screen - Observation List',
       title: 'Start tracking student behavior by creating your first observation'
     },
     {
-      src: '/src/assets/img/v3.0.0-screenshots/400x800bb-2.png',
+      src: screenshot2,
       alt: 'BOSS App Student Setup - Create New Observation',
       title: 'Enter student information and configure observation settings'
     },
     {
-      src: '/src/assets/img/v3.0.0-screenshots/400x800bb-3.png',
+      src: screenshot3,
       alt: 'BOSS App Live Session - Client Tracking',
       title: 'Track client behavior with intuitive interface during observation'
     },
     {
-      src: '/src/assets/img/v3.0.0-screenshots/400x800bb-4.png',
+      src: screenshot4,
       alt: 'BOSS App Haptic Settings - Feedback Configuration',
       title: 'Customize haptic feedback and notification preferences'
     },
     {
-      src: '/src/assets/img/v3.0.0-screenshots/400x800bb-5.png',
+      src: screenshot5,
       alt: 'BOSS App Live Session - Peer Tracking',
       title: 'Switch to peer tracking mode for baseline comparisons'
     },
     {
-      src: '/src/assets/img/v3.0.0-screenshots/400x800bb-6.png',
+      src: screenshot6,
       alt: 'BOSS App Session Notes - Add Observations',
       title: 'Add detailed notes during or after observation sessions'
     },
     {
-      src: '/src/assets/img/v3.0.0-screenshots/400x800bb-7.png',
+      src: screenshot7,
       alt: 'BOSS App Session Summary - Detailed Results',
       title: 'View comprehensive session results and student progress'
     },
     {
-      src: '/src/assets/img/v3.0.0-screenshots/400x800bb-8.png',
+      src: screenshot8,
       alt: 'BOSS App Export Options - Share Data',
       title: 'Export observations as CSV or HTML for reports and analysis'
     },
     {
-      src: '/src/assets/img/v3.0.0-screenshots/400x800bb-9.png',
+      src: screenshot9,
       alt: 'BOSS App Analytics - Behavior Charts and Statistics',
       title: 'Analyze behavior patterns with detailed graphs and statistics'
     }

@@ -35,6 +35,12 @@ jobs:
           # Build the site using Vite
           bun run build
 
+          # Copy .well-known directory for Apple App Site Association
+          if [ -d "src/assets/.well-known" ]; then
+            cp -r src/assets/.well-known dist/
+            echo "✅ Copied .well-known directory"
+          fi
+
           # Verify build output
           if [ -f "dist/index.html" ]; then
             echo "✅ Main index.html built successfully"
