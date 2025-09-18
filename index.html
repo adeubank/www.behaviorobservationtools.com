@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Behavior Observation: BOSS - Professional Student Behavior Tracking
+    </title>
+    <meta
+      name="description"
+      content="The premier behavior observation tool for school psychologists, ABA professionals, and BCBAs. Track student behavior systematically with BOSS methodology."
+    />
+    <meta
+      name="keywords"
+      content="behavior observation, BOSS, school psychology, ABA, BCBA, student tracking, classroom observation"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.behaviorobservationtools.com/"
+    />
+    <meta
+      property="og:title"
+      content="Behavior Observation: BOSS - Professional Student Behavior Tracking"
+    />
+    <meta
+      property="og:description"
+      content="The premier behavior observation tool for school psychologists, ABA professionals, and BCBAs."
+    />
+    <meta property="og:image" content="/src/assets/img/screenshot-1.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.behaviorobservationtools.com/"
+    />
+    <meta property="twitter:title" content="Behavior Observation: BOSS" />
+    <meta
+      property="twitter:description"
+      content="Professional student behavior tracking for educators and psychologists."
+    />
+    <meta property="twitter:image" content="/src/assets/img/screenshot-1.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/assets/img/icon.png" />
+
+    <!-- Styles -->
+    <!-- CSS is imported via JavaScript for better HMR support -->
+
+    <!-- Scripts -->
+    <script src="/src/scripts/app.ts" type="module"></script>
+  </head>
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-x-hidden"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center space-x-2">
+            <img src="/src/assets/img/icon.png" alt="BOSS" class="w-8 h-8" />
+            <span
+              class="font-display font-bold text-xl text-primary-600 dark:text-primary-400"
+              >BOSS</span
+            >
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#features"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >Features</a
+            >
+            <a
+              href="#how-it-works"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >How It Works</a
+            >
+            <a
+              href="#screenshots"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >Screenshots</a
+            >
+            <a
+              href="./contact.html"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >Contact</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 dark:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 hidden dark:block"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
+      >
+        <div class="px-4 py-3 space-y-3">
+          <a
+            href="#features"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            >Features</a
+          >
+          <a
+            href="#how-it-works"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            >How It Works</a
+          >
+          <a
+            href="#screenshots"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            >Screenshots</a
+          >
+          <a
+            href="./contact.html"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+    >
+      <!-- Animated Background -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary-50 via-accent-50 to-purple-50 dark:from-gray-900 dark:via-primary-900/20 dark:to-accent-900/20"
+      >
+        <div
+          class="absolute inset-0 bg-mesh-gradient opacity-20 dark:opacity-10 animate-gradient bg-300%"
+        ></div>
+        <div class="absolute inset-0">
+          <div
+            class="absolute top-20 left-10 w-72 h-72 bg-primary-300/30 dark:bg-primary-600/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"
+          ></div>
+          <div
+            class="absolute top-40 right-10 w-72 h-72 bg-accent-300/30 dark:bg-accent-600/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"
+            style="animation-delay: 2s"
+          ></div>
+          <div
+            class="absolute -bottom-8 left-20 w-72 h-72 bg-purple-300/30 dark:bg-purple-600/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"
+            style="animation-delay: 4s"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-6 py-8 sm:px-8 sm:py-12 lg:px-8 text-center"
+      >
+        <div class="space-y-8 animate-fade-in">
+          <!-- Main Heading -->
+          <div class="space-y-4">
+            <h1
+              class="text-5xl md:text-7xl font-display font-bold bg-gradient-to-r from-primary-600 via-accent-600 to-purple-600 bg-clip-text text-transparent leading-tight"
+            >
+              Behavior Observation:<br />
+              <span class="text-6xl md:text-8xl">BOSS</span>
+            </h1>
+            <p
+              class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            >
+              The premier behavior observation tool for school psychologists,
+              ABA professionals, and BCBAs. Track student behavior
+              systematically with proven BOSS methodology.
+            </p>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a
+              href="https://apps.apple.com/us/app/behavior-observation-boss/id1534801113"
+              class="group relative overflow-hidden bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 animate-pulse-glow"
+            >
+              <img
+                src="/src/assets/img/get-on-app-store.png"
+                alt="Download on the App Store"
+                class="h-12"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.bos.boss"
+              class="group relative overflow-hidden bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 animate-pulse-glow"
+            >
+              <img
+                src="/src/assets/img/get-on-google-play.png"
+                alt="Get it on Google Play"
+                class="h-12"
+              />
+            </a>
+          </div>
+
+          <!-- App Preview -->
+          <div class="mt-16 relative">
+            <div class="flex justify-center space-x-4 md:space-x-8">
+              <!-- Main phone mockup -->
+              <div class="relative transform rotate-2 animate-float">
+                <div
+                  class="w-64 h-auto bg-gradient-to-b from-gray-800 to-gray-900 rounded-3xl p-2 shadow-2xl"
+                >
+                  <div class="bg-black rounded-2xl overflow-hidden">
+                    <img
+                      src="/src/assets/img/v3.0.0-screenshots/400x800bb-3.png"
+                      alt="BOSS App Live Session - Client Tracking"
+                      class="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Second phone mockup -->
+              <div
+                class="hidden md:block relative transform -rotate-3 animate-float"
+                style="animation-delay: 1s"
+              >
+                <div
+                  class="w-64 h-auto bg-gradient-to-b from-gray-800 to-gray-900 rounded-3xl p-2 shadow-2xl"
+                >
+                  <div class="bg-black rounded-2xl overflow-hidden">
+                    <img
+                      src="/src/assets/img/v3.0.0-screenshots/400x800bb-5.png"
+                      alt="BOSS App Live Session - Peer Tracking"
+                      class="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <svg
+          class="w-6 h-6 text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gray-50 dark:bg-gray-800/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2
+            class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4"
+          >
+            Powerful Features for Professional Observation
+          </h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Everything you need to conduct systematic behavior observations with
+            confidence and precision.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1: Systematic Tracking -->
+          <div
+            class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Systematic Behavior Tracking
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Track Engaged, Non-Engaged, and Virtual behaviors with precision.
+              Customizable intervals and durations for any observation scenario.
+            </p>
+          </div>
+
+          <!-- Feature 2: Client & Peer Comparison -->
+          <div
+            class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Client & Peer Comparison
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Compare target student behavior with peer baselines. Switch
+              seamlessly between client and peer observation modes.
+            </p>
+          </div>
+
+          <!-- Feature 3: Haptic Feedback -->
+          <div
+            class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Advanced Haptic Feedback
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Stay focused on students with customizable haptic feedback, audio
+              cues, and visual notifications for interval changes.
+            </p>
+          </div>
+
+          <!-- Feature 4: Professional Reports -->
+          <div
+            class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Professional Reports
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Generate comprehensive PDF reports with detailed graphs,
+              statistics, and observation notes for IEP meetings and
+              assessments.
+            </p>
+          </div>
+
+          <!-- Feature 5: Classroom & Virtual -->
+          <div
+            class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2M7 4h10M7 4l-2 14h14L17 4M11 9h2M9 13h6"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              In-Classroom & Virtual
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Seamlessly observe students in traditional classroom settings or
+              remote learning environments with specialized virtual tracking.
+            </p>
+          </div>
+
+          <!-- Feature 6: Unlimited Sessions -->
+          <div
+            class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Unlimited Sessions
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              Conduct unlimited observation sessions with no restrictions.
+              Perfect for longitudinal studies and continuous monitoring.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Gallery Section -->
+    <section id="screenshots" class="py-24 bg-white dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2
+            class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4"
+          >
+            See BOSS in Action
+          </h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Explore the latest v3.0.0 interface designed for efficiency and ease
+            of use in any observation environment.
+          </p>
+        </div>
+
+        <!-- Screenshot Carousel -->
+        <div class="relative" data-aos="fade-up" data-aos-delay="200">
+          <div id="screenshot-carousel" class="overflow-hidden rounded-3xl">
+            <div
+              id="screenshot-container"
+              class="flex transition-transform duration-500 ease-in-out"
+            >
+              <!-- Screenshots will be dynamically loaded here -->
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button
+            id="prev-screenshot"
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-gray-600 dark:text-gray-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </button>
+          <button
+            id="next-screenshot"
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-gray-600 dark:text-gray-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Carousel Indicators -->
+          <div
+            id="screenshot-indicators"
+            class="flex justify-center mt-8 space-x-2"
+          >
+            <!-- Indicators will be dynamically generated -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section
+      id="how-it-works"
+      class="py-24 bg-gradient-to-br from-primary-50 to-accent-50 dark:from-gray-800 dark:to-gray-900"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2
+            class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4"
+          >
+            How BOSS Works
+          </h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Simple, systematic, and scientifically validated methodology for
+            behavior observation.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold"
+            >
+              1
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Setup Student Information
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Enter student details, select observation settings, and customize
+              intervals to match your assessment needs.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold"
+            >
+              2
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Conduct Observation
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Track behaviors in real-time with intuitive interface. Switch
+              between client and peer observations seamlessly.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold"
+            >
+              3
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Generate Reports
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Export comprehensive reports with graphs, statistics, and notes
+              for IEPs, assessments, and interventions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section
+      class="py-24 bg-gradient-to-r from-primary-600 to-accent-600 text-white"
+    >
+      <div
+        class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8"
+        data-aos="fade-up"
+      >
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+          Ready to Transform Your Observations?
+        </h2>
+        <p class="text-xl mb-8 opacity-90">
+          Join thousands of professionals who trust BOSS for systematic behavior
+          observation.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        >
+          <a
+            href="https://apps.apple.com/us/app/behavior-observation-boss/id1534801113"
+            class="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105"
+          >
+            <img
+              src="/src/assets/img/get-on-app-store.png"
+              alt="Download on the App Store"
+              class="h-12"
+            />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.bos.boss"
+            class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105"
+          >
+            <img
+              src="/src/assets/img/get-on-google-play.png"
+              alt="Get it on Google Play"
+              class="h-12"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logo and Description -->
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-2 mb-4">
+              <img src="/src/assets/img/icon.png" alt="BOSS" class="w-8 h-8" />
+              <span class="font-display font-bold text-xl text-primary-400"
+                >Behavior Observation: BOSS</span
+              >
+            </div>
+            <p class="text-gray-400 mb-6 max-w-md">
+              The premier behavior observation tool for education professionals.
+              Systematic, reliable, and scientifically validated.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://apps.apple.com/us/app/behavior-observation-boss/id1534801113"
+                class="hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="/src/assets/img/get-on-app-store.png"
+                  alt="App Store"
+                  class="h-10"
+                />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.bos.boss"
+                class="hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="/src/assets/img/get-on-google-play.png"
+                  alt="Google Play"
+                  class="h-10"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#features" class="hover:text-white transition-colors"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#how-it-works"
+                  class="hover:text-white transition-colors"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#screenshots"
+                  class="hover:text-white transition-colors"
+                  >Screenshots</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="font-semibold text-lg mb-4">Legal</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a
+                  href="./privacy.html"
+                  class="hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./terms.html"
+                  class="hover:text-white transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 Behavior Observation Tools. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

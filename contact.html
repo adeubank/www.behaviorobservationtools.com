@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Behavior Observation: BOSS</title>
+    <meta name="description" content="Contact us for support with Behavior Observation: BOSS app. Get help from our team.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/assets/img/icon.png">
+
+    <!-- Styles -->
+    <!-- CSS is imported via JavaScript for better HMR support -->
+
+    <!-- Scripts -->
+    <script src="/src/scripts/theme.ts" type="module"></script>
+    <script src="/src/scripts/interactions.ts" type="module"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img src="/src/assets/img/icon.png" alt="BOSS" class="w-8 h-8">
+                    <a href="./index.html" class="font-display font-bold text-xl text-primary-600 dark:text-primary-400">BOSS</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="./index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Home</a>
+                    <a href="./index.html#features" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Features</a>
+                    <a href="./contact.html" class="text-primary-600 dark:text-primary-400 font-semibold">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-accent-50 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-display font-bold bg-gradient-to-r from-primary-600 via-accent-600 to-purple-600 bg-clip-text text-transparent mb-6">
+                Get in Touch
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Have questions about BOSS? Need technical support? We're here to help you make the most of your behavior observation experience.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <main class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+                        <h2 class="text-3xl font-display font-bold text-gray-900 dark:text-white mb-6">
+                            Contact Information
+                        </h2>
+
+                        <div class="space-y-6">
+                            <!-- Email -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Email Support</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-3">
+                                        Send us an email and we'll get back to you as soon as possible.
+                                    </p>
+                                    <a href="mailto:behaviorobservationtools@gmail.com"
+                                       class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                        behaviorobservationtools@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Response Time -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Response Time</h3>
+                                    <p class="text-gray-600 dark:text-gray-300">
+                                        We typically respond to emails within 24-48 hours during business days.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Support Topics -->
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">What We Can Help With</h3>
+                                    <ul class="text-gray-600 dark:text-gray-300 space-y-1">
+                                        <li>• Technical support and troubleshooting</li>
+                                        <li>• Feature requests and suggestions</li>
+                                        <li>• Data export and sharing questions</li>
+                                        <li>• Training and best practices</li>
+                                        <li>• Billing and account issues</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Form -->
+                <div>
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+                        <h2 class="text-3xl font-display font-bold text-gray-900 dark:text-white mb-6">
+                            Quick Contact Form
+                        </h2>
+
+                        <form class="space-y-6" action="mailto:behaviorobservationtools@gmail.com" method="get">
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="text" id="name" name="name" required
+                                           class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors">
+                                    <label for="name" class="text-gray-500 dark:text-gray-400">Your Name</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="email" id="email" name="email" required data-validate="email"
+                                           class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors">
+                                    <label for="email" class="text-gray-500 dark:text-gray-400">Your Email</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                                <select id="subject" name="subject"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors">
+                                    <option value="">Select a topic</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Feature Request">Feature Request</option>
+                                    <option value="Data Export Question">Data Export Question</option>
+                                    <option value="Training Question">Training Question</option>
+                                    <option value="Billing Question">Billing Question</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <textarea id="message" name="body" rows="6" required
+                                              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"></textarea>
+                                    <label for="message" class="text-gray-500 dark:text-gray-400">Your Message</label>
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                    class="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                                    data-loading>
+                                Send Message
+                            </button>
+
+                            <p class="text-sm text-gray-500 dark:text-gray-400 text-center">
+                                This form will open your default email client. You can also email us directly at
+                                <a href="mailto:behaviorobservationtools@gmail.com" class="text-primary-600 dark:text-primary-400 hover:underline">behaviorobservationtools@gmail.com</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mt-16">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+                    <h2 class="text-3xl font-display font-bold text-gray-900 dark:text-white mb-8 text-center">
+                        Frequently Asked Questions
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                                    How do I export my observation data?
+                                </h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    You can export observation data directly from the app as PDF reports or CSV files for further analysis. Look for the export button in your observation details.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                                    Is student data secure?
+                                </h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    Yes, all student data remains on your device by default. Data is only transmitted for crash reporting or technical support when explicitly needed, and is never retained for more than 14 days.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                                    Can I customize observation intervals?
+                                </h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    Absolutely! BOSS allows you to customize both observation intervals and total duration to match your specific assessment needs and methodological requirements.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                                    Do you offer training resources?
+                                </h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    We provide comprehensive documentation and best practices guidance. For specific training needs, please contact us and we'll be happy to help or recommend resources.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                                    Is BOSS compatible with my device?
+                                </h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    BOSS is available for both iOS and Android devices. Check the app store requirements for specific version compatibility with your device.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                                    Can I use BOSS for virtual observations?
+                                </h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    Yes! BOSS includes specialized features for virtual observations, including tracking student participation in remote learning environments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo and Description -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="/src/assets/img/icon.png" alt="BOSS" class="w-8 h-8">
+                        <span class="font-display font-bold text-xl text-primary-400">Behavior Observation: BOSS</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        The premier behavior observation tool for education professionals. Systematic, reliable, and scientifically validated.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://apps.apple.com/us/app/behavior-observation-boss/id1534801113" class="hover:opacity-80 transition-opacity">
+                            <img src="/src/assets/img/get-on-app-store.png" alt="App Store" class="h-10">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.bos.boss" class="hover:opacity-80 transition-opacity">
+                            <img src="/src/assets/img/get-on-google-play.png" alt="Google Play" class="h-10">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="./index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="./index.html#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="./contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Legal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="./privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="./terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Behavior Observation Tools. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initializeTheme } from '/src/scripts/theme.ts';
+        import { initializeInteractions } from '/src/scripts/interactions.ts';
+
+        initializeTheme();
+        initializeInteractions();
+    </script>
+</body>
+</html>
