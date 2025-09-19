@@ -72,6 +72,86 @@ body {
   background-clip: text;
 }
 
+/* iOS Safari Dark Mode Fix for Gradient Text */
+@supports (-webkit-touch-callout: none) {
+  /* iOS-specific styles */
+  .gradient-text-ios-safe {
+    /* Fallback solid color for iOS */
+    color: #8b5cf6;
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 50%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Force hardware acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Dark mode specific fixes for iOS */
+  .dark .gradient-text-ios-safe {
+    /* Brighter fallback for dark mode */
+    color: #a78bfa;
+    background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 50%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Additional iOS WebKit bug fixes */
+.gradient-text-ios-safe {
+  /* Universal fallback color */
+  color: #7c3aed;
+  /* Enhanced gradient for better visibility */
+  background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #7c3aed 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Ensure proper rendering */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  /* Force WebKit to recognize this as a layer */
+  will-change: transform;
+  /* Prevent text selection issues */
+  -webkit-user-select: none;
+  user-select: none;
+  /* Better text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode enhanced styling */
+.dark .gradient-text-ios-safe {
+  /* Brighter fallback color for dark mode */
+  color: #a78bfa !important;
+  /* Enhanced gradient for dark mode */
+  background: linear-gradient(135deg, #c4b5fd 0%, #93c5fd 50%, #a78bfa 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fallback for very old iOS versions */
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
+  .gradient-text-ios-safe {
+    /* Solid color fallback */
+    background: none !important;
+    color: #7c3aed !important;
+    -webkit-text-fill-color: unset !important;
+  }
+
+  .dark .gradient-text-ios-safe {
+    background: none !important;
+    color: #a78bfa !important;
+    -webkit-text-fill-color: unset !important;
+  }
+}
+
 /* Custom Button Styles */
 .btn-primary {
   background: linear-gradient(to right, #8b5cf6, #7c3aed);
